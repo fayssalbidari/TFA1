@@ -1,0 +1,78 @@
+@import 'commons/_fonts.scss';
+@import 'commons/_mixin.scss';
+@import 'commons/_responsive.scss';
+@import 'commons/_variables.scss';
+@import 'commons/_global.scss';
+@import 'commons/_button.scss';
+@import 'commons/_animation.scss';
+
+@import 'components/_header.scss';
+@import 'components/_mainpage.scss';
+@import 'components/_about.scss';
+@import 'components/_projet.scss';
+@import 'components/_skills.scss';
+
+@import 'components/_footer.scss';
+
+
+
+.cards {
+    height: 70vh;
+    width: 90%;
+    margin: auto;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.card {
+    position: absolute;
+    width: 60%;
+    height: 70vh;
+    background: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+    margin-bottom: 50px;
+}
+
+.card-1 {
+    left: 0;
+    top: 0;
+}
+
+.card-2 {
+    left: 35px;
+    top: 35px;
+}
+
+.card-3 {
+    left: 70px;
+    top: 70px;
+}
+
+.card h2 {
+    font-size: 80px;
+    font-weight: 900;
+    font-stretch: condensed;
+    color: #ff98a2;
+    text-transform: uppercase;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

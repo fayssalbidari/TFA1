@@ -1,0 +1,59 @@
+.skills{
+
+    padding-bottom: 60px;
+    &__list{
+        display: flex;
+        justify-content: center;
+        gap: 192px;
+        @include mq("mobile") {
+            flex-direction: column;
+            gap: 64px;
+            padding: 0 20px;
+          }
+
+    }
+    &-sublist{
+        display: flex;
+        flex-direction: column;
+        gap: 46px;
+    }
+    &-sublist__el{
+        max-width: 450px;
+    }
+    &__items{
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+    &__item{
+        border: solid 1px black;
+        width: fit-content;
+        padding: 4px 12px;
+        border-radius: 50px;
+        text-transform: uppercase;
+    }
+    &__item:nth-child(odd){
+        font-family: $font-italic;
+        font-style: italic;
+        font-weight: 100;
+        font-size: calc($size-text-desktop - 2px);
+        @include mq("mobile") {
+            font-size: calc($size-text-mobile - 1px);
+          }
+    }
+    &__item:nth-child(1){
+        transform: translateX(100px);
+    }
+    &__item:nth-child(2){
+        transform: translateX(130px);
+    }
+    &__item:nth-child(3){
+        transform: translateX(160px);
+    }
+    &__item:nth-child(4){
+        transform: translateX(190px);
+    }
+    &__item:nth-child(5){
+        transform: translateX(220px);
+    }
+}

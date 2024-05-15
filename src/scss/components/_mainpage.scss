@@ -1,0 +1,49 @@
+.main{
+    padding: 120px 60px 60px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
+    align-items: center;
+    @include mq("mobile") {
+        padding: 60% 20px 30px;
+    }
+
+    &__img{
+        width: 40px;
+
+        animation: bounce 3s ease-in-out 0s infinite;
+    }
+}
+
+.titre{
+    font-size: 128px;
+    text-transform: uppercase;
+    line-height: 100%;
+    @include mq("mobile") {
+        font-size: 40px;
+        line-height: 200%;
+    }
+    &-droite{
+        justify-content: space-between;
+        display: flex;
+        overflow: hidden;
+    }
+    &-gauche{
+        font-family: $font-italic;
+        font-style: italic;
+        font-weight: 100;
+        justify-content: flex-end;
+        display: flex;
+        overflow: hidden;
+    }
+    &-centre{
+        margin-left: 400px;
+        @include mq("mobile") {
+            margin-left: 100px;
+        }
+    }
+    &__container{
+        width: 100%;
+    }
+}
