@@ -1,0 +1,39 @@
+.switch {
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 0;
+    border-radius: 50px;
+    height: 50px;
+    cursor: pointer;
+    width: 100px;
+    background-color: rgb(199, 199, 199);
+    position: relative;
+    border: 0;
+  }
+  .switch:after {
+    content: "";
+    display: block;
+    width: 46px;
+    height: 46px;
+    background-color: #FAFAFA;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    border-radius: 23px;
+    transition: 0.3s;
+  }
+  .switch--active {
+    background-color: green;
+  }
+  .switch--active:after {
+    transform: translateX(50px);
+  }/*# sourceMappingURL=style.css.map */
+
+  .grid{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    padding: 0 30px;
+    height: 100vh;
+  }
