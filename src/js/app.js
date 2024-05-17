@@ -20,6 +20,22 @@ function menuOpen(){
 
 /* if page home */
 
+
+let timeMain = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".main",
+        pin: true,
+        start:"bottom bottom",
+        end:'+=2500',
+        scrub: 1
+    }
+});
+
+timeMain.to('.bubble', {
+    width: "100%",
+    height: "100%",
+});
+
 let timeAbout = gsap.timeline({
     scrollTrigger: {
         trigger: ".about",
@@ -28,7 +44,7 @@ let timeAbout = gsap.timeline({
         scrub: 1
     }
 });
-timeAbout.to('.about-container__img', {
+timeAbout.to('.about-container', {
     y: '0',
     x: '0',
     rotate: ' 2deg'

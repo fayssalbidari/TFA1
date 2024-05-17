@@ -3,8 +3,8 @@
 $breakpoints: (
   mobile: "(max-width:576px)",
   tablet: "(min-width:577px) and (max-width:768px)",
-  laptop: "(min-width:769px) and (max-width: 1366px)",
-  desktop: "(min-width:1367px) and (max-width:1605px)",
+  laptop: "(min-width:769px) and (max-width: 1440px)",
+  desktop: "(min-width:1441px) and (max-width:1605px)",
   layout-change: "(max-width: 991px), all and (max-height:635px)",
 ) !default;
 
