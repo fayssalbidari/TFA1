@@ -6,6 +6,7 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
+    overflow: hidden;
     @include mq("mobile") {
         padding: 60% 20px 30px;
     }
@@ -59,4 +60,5 @@
     height: 15px;
     border-radius: 50%;
     background-color: aqua;
+    overflow: hidden;
 }
