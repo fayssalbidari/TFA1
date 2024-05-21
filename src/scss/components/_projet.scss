@@ -1,4 +1,4 @@
-.work{
+/*.work{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -117,3 +117,122 @@
         border-radius: 20px;
     }
 }
+
+*/
+
+.title__container--work{
+    margin: 60px 0 50px;@include mq("mobile") {margin: 60px 0 80px;}
+}
+
+.projet{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projets {
+    height: 75vh;
+    width: 90%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.work{
+    position: absolute;
+    width: 80%;
+    height: 85%;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    border: solid 1px black;
+    background-color: white;
+
+
+    &__imgs{
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        align-items: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        @include mq("mobile") {
+            width: auto;
+            justify-content: center;
+            top: 30%;
+        
+        }
+    }
+    &__img img{
+        height: 100%;
+        width: auto;
+    }
+    &__img:nth-child(1){
+        width: 300px;
+        height: 400px;
+        transform: rotate(-4deg);
+        overflow: hidden;
+        @include mq("mobile") {
+            width: 200px;
+            height: 300px;
+        }
+    }
+    &__img:nth-child(2){
+        width: 400px;
+        height: 250px;
+        overflow: hidden;
+        transform: rotate(5deg);
+        @include mq("mobile") {display: none;}
+    }
+    &__tags{
+        display: flex;
+        gap: 16px;
+    }
+    &__tag{
+        border: solid 1px black;
+        border-radius: 20px;
+        padding: 0.2rem 1rem;
+        text-transform: uppercase;
+    }
+}
+
+.rel{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 64px;
+    @include mq("mobile") {padding: 32px 0;}
+    
+
+}
+.work__textes{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-6deg);
+    text-align: center;display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    @include mq("mobile") {
+        gap: 16px;
+        top: 75%;
+    }
+}
+.projet-1{
+    transform: translate(-50%, 100%) rotate(3deg);
+}
+.projet-2{
+    transform:translate(-50%, 100%) rotate(-1deg);
+    opacity: 0;
+}
+.projet-3{
+    transform:translate(-50%, 100%) rotate(-4deg);
+    opacity: 0;
+}
+

@@ -50,6 +50,54 @@ timeAbout.to('.about-container', {
     rotate: ' 2deg'
 });
 
+let timeWork = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".projet",
+        end:'+=2500',
+        pin: true,
+        scrub: 1
+    }
+});
+
+timeWork.to('.projet-1', {
+    yPercent: '-150',
+    opacity: 1,
+});
+
+timeWork.to('.work__imgs--1', {
+    width:'120%',
+    rotate:'-7deg',
+    scale: "0.8",
+});
+
+timeWork.to('.projet-2', {
+    yPercent: '-150',
+    opacity: 1,
+});
+timeWork.to('.work__imgs--2', {
+    width:'120%',
+    rotate:'7deg',
+    scale: "0.8",
+});
+
+timeWork.to('.projet-1', {
+    scale: 0.95,
+});
+
+timeWork.to('.projet-3', {
+    yPercent: '-150',
+    opacity: 1,
+});
+timeWork.to('.work__imgs--3', {
+    width:'120%',
+    rotate:'3deg',
+    scale: "0.8",
+});
+
+timeWork.to('.projet-2', {
+    scale: 0.95,
+});
+
 /*
 let timeWork = gsap.timeline({
     scrollTrigger: {

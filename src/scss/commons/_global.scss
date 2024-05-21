@@ -75,6 +75,7 @@ html {
   h2{
     font-size: $size-title-desktop;
     text-transform: uppercase;
+    white-space: nowrap;
     span{
       font-size: calc($size-title-desktop - 3px);
       font-family: $font-italic ;
