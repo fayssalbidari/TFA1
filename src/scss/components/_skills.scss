@@ -12,6 +12,9 @@
           }
 
     }
+    &__el{
+        backdrop-filter: blur(3px);
+    }
     &-sublist{
         display: flex;
         flex-direction: column;
