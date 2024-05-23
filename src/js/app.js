@@ -65,7 +65,7 @@ timeWork.to('.projet-1', {
 });
 
 timeWork.to('.work__imgs--1', {
-    width:'120%',
+    width:'140%',
     rotate:'-7deg',
     scale: "0.8",
 });
@@ -75,7 +75,7 @@ timeWork.to('.projet-2', {
     opacity: 1,
 });
 timeWork.to('.work__imgs--2', {
-    width:'120%',
+    width:'140%',
     rotate:'7deg',
     scale: "0.8",
 });
@@ -89,7 +89,7 @@ timeWork.to('.projet-3', {
     opacity: 1,
 });
 timeWork.to('.work__imgs--3', {
-    width:'120%',
+    width:'140%',
     rotate:'3deg',
     scale: "0.8",
 });
@@ -180,7 +180,7 @@ timeSkills.to('.skills__item', {
 });
 
 
-/* if page work */
+/* if page work 
 
 
 const btn = document.querySelector(".switch");
@@ -190,3 +190,4 @@ btn.addEventListener("click", switchToggle);
 function switchToggle() {
     btn.classList.toggle("switch--active");
 }
+*/
