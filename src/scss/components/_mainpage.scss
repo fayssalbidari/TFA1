@@ -61,6 +61,9 @@
     border-radius: 50%;
     background-color: aqua;
     overflow: hidden;
+    @include mq("mobile") {
+        display: none;
+    }
 }
 
 .bg{
@@ -74,9 +77,18 @@
 
     &__bleu{
         position: absolute;
+        @include mq("mobile") {
+            height: 100%;
+            transform: translate(-55%, -10%);
+        }
     }
     &__vert{
         position: absolute;
+        @include mq("mobile") {
+            height: 50%;
+            transform: translate(-15%, 80%) rotate(344deg);
+        
+        }
     }
 
 }
