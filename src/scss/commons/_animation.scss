@@ -6,19 +6,50 @@
     to{
       transform:rotate(0deg);
     }
-  }
+}
 
-  @keyframes bounce {
-    0% {
-      transform: translateY(0%);
+@keyframes bounce {
+    0%{
+      transform: translateY(-100%);
     }
-  
-    50% {
-      transform: translateY(-40%);
+    20%{
+      transform: translateY(0);
     }
-
+    21%{
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-30px);
+    }
+    50%{
+      transform: translateY(0);
+    }
+    60% {transform: translateY(-20px);
+    }
+    80%{
+      transform: translateY(0);
+    }
     100% {
-      transform: translateY(0%);
+      transform: translateY(0);
     }
-  
+}
+
+@keyframes arrow {
+  0%{
+    transform: translateY(-40px);
   }
+  50%{
+    transform: translateY(0%);
+  }
+  100%{
+    transform: translateY(-40px);
+  }
+}
+
+@keyframes draw {
+
+  100% {
+      stroke-dashoffset: 0;
+  }
+
+}
