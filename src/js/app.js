@@ -18,6 +18,28 @@ function menuOpen(){
 
 }
 
+document.addEventListener('pointermove', function(event) {
+    const x = event.clientX;
+    const y = event.clientY;
+
+    const posX = x / window.innerWidth;
+    const posY = y / window.innerHeight;
+
+    const layers = document.querySelectorAll('.layer');
+
+    layers.forEach(function(layer, index) {
+        const transformX = -posX * (index + 1) * -20 + 'px';
+        const transformY = -posY * (index + 1) * -20 + 'px';
+
+        // Utilisation de GSAP pour animer les transformations avec une durée plus longue et une accélération
+        gsap.to(layer, {
+            x: transformX,
+            y: transformY,
+            ease: "power1.out",
+        });
+    });
+});
+
 /* if page home */
 
 
