@@ -35,15 +35,92 @@ document.addEventListener('pointermove', function(event) {
     });
 });
 
-/* if page home */
 
 
 
 document.addEventListener("DOMContentLoaded", function() {
     const url = window.location.pathname;
 
-    if (url.includes("index.html")) {
+    
+
+    if (url.includes("work.html")) {
+        console.log("Code pour work.html");
+        
+        // Timeline pour la section "Projet"
+        let timeWork = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".projet",
+                end: '+=2500',
+                pin: true,
+                scrub: 1
+            }
+        });
+        
+        timeWork.to('.projet-1', {
+            yPercent: '-150',
+            opacity: 1,
+        })
+        .to('.work__imgs--1', {
+            width: '140%',
+            rotate: '-7deg',
+            scale: "0.8",
+        })
+        .to('.projet-2', {
+            yPercent: '-150',
+            opacity: 1,
+        })
+        .to('.work__imgs--2', {
+            width: '140%',
+            rotate: '7deg',
+            scale: "0.8",
+        })
+        .to('.projet-1', {
+            scale: 0.95,
+        })
+        .to('.projet-3', {
+            yPercent: '-150',
+            opacity: 1,
+        })
+        .to('.work__imgs--3', {
+            width: '140%',
+            rotate: '3deg',
+            scale: "0.8",
+        })
+        .to('.projet-2', {
+            scale: 0.95,
+        });
+
+    }
+
+    else {
         console.log("Code pour index.html");
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const elements = [
+              { section: document.querySelector('.main'), trigger: document.querySelector('.home') },
+              { section: document.querySelector('.projet'), trigger: document.querySelector('.taff') },
+              { section: document.querySelector('.contact'), trigger: document.querySelector('.call') }
+            ];
+        
+            const observerOptions = {
+              threshold: 0.5 // Ajustez ce seuil selon vos besoins
+            };
+        
+            elements.forEach(({ section, trigger }) => {
+              const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                  if (entry.isIntersecting) {
+                    trigger.classList.add('active');
+                  } else {
+                    trigger.classList.remove('active');
+                  }
+                });
+              }, observerOptions);
+        
+              observer.observe(section);
+            });
+          });
+        
 
         
         // Timeline pour la section principale
@@ -60,6 +137,7 @@ document.addEventListener("DOMContentLoaded", function() {
         timeMain.to('.bubble', {
             width: '100%',
             height:'100%',
+
         });
         timeMain.to('.bubble', {
             borderRadius: "0%",
@@ -137,11 +215,6 @@ document.addEventListener("DOMContentLoaded", function() {
         timeSkills.to('.skills__item', {
             x: '0px',
         });
-    }
-
-    if (url.includes("work.html")) {
-        console.log("Code pour work.html");
-        // Ajoutez votre code spécifique à work.html ici
     }
 });
 
