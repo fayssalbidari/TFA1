@@ -36,6 +36,34 @@ document.addEventListener('pointermove', function(event) {
 });
 
 
+document.addEventListener('DOMContentLoaded', function () {
+    const elements = [
+      { section: document.querySelector('.main'), trigger: document.querySelector('.home') },
+      { section: document.querySelector('.projet'), trigger: document.querySelector('.taff') },
+      { section: document.querySelector('.contact'), trigger: document.querySelector('.call') }
+    ];
+
+    const observerOptions = {
+      threshold: 0.5 // Ajustez ce seuil selon vos besoins
+    };
+
+    elements.forEach(({ section, trigger }) => {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            trigger.classList.add('active');
+          } else {
+            trigger.classList.remove('active');
+          }
+        });
+      }, observerOptions);
+
+      observer.observe(section);
+    });
+  });
+
+
+
 
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -94,33 +122,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     else {
         console.log("Code pour index.html");
-
-        document.addEventListener('DOMContentLoaded', function () {
-            const elements = [
-              { section: document.querySelector('.main'), trigger: document.querySelector('.home') },
-              { section: document.querySelector('.projet'), trigger: document.querySelector('.taff') },
-              { section: document.querySelector('.contact'), trigger: document.querySelector('.call') }
-            ];
-        
-            const observerOptions = {
-              threshold: 0.5 // Ajustez ce seuil selon vos besoins
-            };
-        
-            elements.forEach(({ section, trigger }) => {
-              const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                  if (entry.isIntersecting) {
-                    trigger.classList.add('active');
-                  } else {
-                    trigger.classList.remove('active');
-                  }
-                });
-              }, observerOptions);
-        
-              observer.observe(section);
-            });
-          });
-        
 
         
         // Timeline pour la section principale

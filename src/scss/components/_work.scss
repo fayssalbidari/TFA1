@@ -41,8 +41,7 @@
       height: 100%;
     }
     .img__grid{
-      width: fit-content;
-      height: 100%;
+      height: fit-content;
     }
   }
 
@@ -58,8 +57,6 @@
     font-family: $font-italic;
     font-style: italic;
     font-weight: 100;
-    background: url(../../images/line01.svg) no-repeat;
-    background-size: cover;
     @include mq("mobile") {
       font-size: $size-title-mobile;
     }
