@@ -74,6 +74,11 @@
     &__tags{
         display: flex;
         gap: 16px;
+        .italic{
+            font-family: $font-italic;
+            font-style: italic;
+            font-weight: 100;
+        }
     }
     &__tag{
         border: solid 1px black;

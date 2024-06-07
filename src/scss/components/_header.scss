@@ -38,6 +38,7 @@
     }
 
     &__el{
+        backdrop-filter: blur(3px);
         .button{
             width: 500px;
             display: flex;
@@ -48,6 +49,7 @@
                 position: absolute;
                 left: 50%;
                 transform: translateX(-50%);
+                backdrop-filter: blur(0px);
             }
             
         }

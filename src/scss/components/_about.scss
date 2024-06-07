@@ -21,10 +21,42 @@
 }
 .title__img{
     width: 20%;
-    @include mq("laptop") {width: 30%;}
+    @include mq("laptop") {width: 70%;}
     @include mq("mobile") {
         width: 50%;
       }
+    &-skills{
+        width: 30%;
+        @include mq("mobile") {
+            width: 50%;
+        }
+    }
+    &-about{
+        width: 20%;
+        @include mq("mobile") {
+            width: 50%;
+        }
+    }
+    &-work{
+        width: 80%;
+        @include mq("mobile") {
+            width: 50%;
+        }
+    
+    }
+    &-projet{
+        width: 30%;
+        @include mq("mobile") {
+            width: 50%;
+        }
+    
+    }
+    &-contact{
+        width: 40%;
+        @include mq("mobile") {
+            width: 50%;
+        }
+    }
 }
 
 .about{
@@ -89,6 +121,11 @@
         font-size: 1.2rem;
         display: flex;
         gap: 15px;
+        .italic{
+            font-family: $font-italic;
+            font-style: italic;
+            font-weight: 100;
+        }
     }
     &__interest {
         border: solid 1px black;
